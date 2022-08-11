@@ -139,8 +139,14 @@ forms.addEventListener("submit" , (ev) => {
 function remove(){
    const  toBeRemoved = document.getElementById("uniqueVal").value
 console.log("i arm here")
-   localStorage.removeItem(toBeRemoved)    
+    if (!toBeRemoved in localStorage ){
+        alert("Details not found")
+    }else{
+           localStorage.removeItem(toBeRemoved)    
 console.log(toBeRemoved)
+    }
+        
+
 }
 
 
